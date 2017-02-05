@@ -1,0 +1,35 @@
+{
+  "name": "herbpope",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run build:css && npm run build:js",
+    "build:css": "node_modules/less/bin/lessc src/app/public/less/style.less > src/app/public/css/style.css",
+    "watch:js": "node_modules/watch/cli.js 'npm run build:css' src/app/public/less/",
+    "build:js": "node_modules/browserify/bin/cmd.js src/app/public/js/main.js > src/app/public/js/bundle.js",
+    "watch:js": "node_modules/watch/cli.js 'npm run build:js' src/app/public/js/",
+    "build:watch": "node_modules/watch/cli.js --wait=2 'npm run build' ./src/app/public/"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "browserify": "^14.0.0",
+    "compression": "^1.6.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.14.1",
+    "express-handlebars": "^3.0.0",
+    "glob": "^7.1.1",
+    "jquery": "^3.1.1",
+    "mongoose": "^4.8.1",
+    "morgan": "^1.7.0",
+    "passport": "^0.3.2",
+    "serve-favicon": "^2.3.2"
+  },
+  "devDependencies": {
+    "less": "^2.7.2",
+    "watch": "^1.0.1"
+  }
+}
