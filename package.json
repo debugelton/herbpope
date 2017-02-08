@@ -7,10 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm run build:css && npm run build:js",
     "build:css": "node_modules/less/bin/lessc src/app/public/less/style.less > src/app/public/css/style.css",
-    "watch:js": "node_modules/watch/cli.js 'npm run build:css' src/app/public/less/",
+    "watch:css": "node_modules/watch/cli.js 'npm run build:css' src/app/public/less/",
     "build:js": "node_modules/browserify/bin/cmd.js src/app/public/js/main.js > src/app/public/js/bundle.js",
     "watch:js": "node_modules/watch/cli.js 'npm run build:js' src/app/public/js/",
-    "build:watch": "node_modules/watch/cli.js --wait=2 'npm run build' ./src/app/public/"
+    "build:watch": "node_modules/watch/cli.js 'npm run build' ./src/app/public/"
   },
   "author": "",
   "license": "ISC",
