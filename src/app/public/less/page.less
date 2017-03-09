@@ -1,0 +1,82 @@
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.menu {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    padding: 1em;
+    background: #fff;
+    max-width: 100px;
+    .transition(max-width 1s ease-in);
+    .wrapper {
+        position: relative;
+    }
+    .fa {
+        background: #fff;
+        font-size: 3em;
+        position: absolute;
+        right: 0;
+        padding: 15px;
+    }
+    ul,li {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    ul {
+        position: absolute;
+        right: -100px;
+        .transition(right 0.3s ease-in);
+    }
+    &.in {
+        max-width: 1000px;
+        ul {
+            right: 100px;
+        }
+    }
+}
+
+.page-wrapper {
+    margin: 0 auto;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.animated-flower {
+
+    @keyframes flower {
+        0% {
+            transform: rotateX(0deg) translateX(0);
+        }
+        50% {
+            transform: rotateX(-0.2deg) translateX(0.5em);
+        }
+        100% {
+            transform: rotateX(0deg) translateX(0);
+        }
+    }
+    perspective: 150px;
+    perspective-origin: 10% 10%;
+    background: #5480F9;
+    img {
+        animation: flower 4s linear infinite;
+        width: 50%;
+    }
+}
+
+.home {
+    background: url(../images/portrait.jpg) 0 0 / cover;
+    height: 95vh;
+    position: relative;
+}
+
+.author {
+    .teaser{
+        &.book {
+            margin-top: 30px;
+            border-top: 1px solid #000;
+        }
+    }
+}

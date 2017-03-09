@@ -10222,4 +10222,9 @@ return jQuery;
 
 },{}],2:[function(require,module,exports){
 var $ = require('jquery');
+$(function () {
+    $('.js-menu').click(function () {
+        $(this).toggleClass('in');
+    });
+})
 },{"jquery":1}]},{},[2]);

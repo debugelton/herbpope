@@ -6,11 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm run build:css && npm run build:js",
+    "watch": "node_modules/watch/cli.js 'npm run build' src/app/public/js/assets src/app/public/less",
     "build:css": "node_modules/less/bin/lessc src/app/public/less/style.less > src/app/public/css/style.css",
-    "watch:css": "node_modules/watch/cli.js 'npm run build:css' src/app/public/less/",
-    "build:js": "node_modules/browserify/bin/cmd.js src/app/public/js/main.js > src/app/public/js/bundle.js",
-    "watch:js": "node_modules/watch/cli.js 'npm run build:js' src/app/public/js/",
-    "build:watch": "node_modules/watch/cli.js 'npm run build' ./src/app/public/"
+    "watch:less": "node_modules/watch/cli.js 'npm run build:css' src/app/public/less/",
+    "build:js": "node_modules/browserify/bin/cmd.js src/app/public/js/assets/main.js > src/app/public/js/dist/bundle.js",
+    "watch:js": "node_modules/watch/cli.js 'npm run build:js' src/app/public/js/assets/"
   },
   "author": "",
   "license": "ISC",
