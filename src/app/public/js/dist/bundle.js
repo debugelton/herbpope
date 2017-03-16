@@ -10223,8 +10223,8 @@ return jQuery;
 },{}],2:[function(require,module,exports){
 var $ = require('jquery');
 $(function () {
-    $('.js-menu').click(function () {
-        $(this).toggleClass('in');
+    $('.js-menu-trigger').click(function () {
+        $('.js-menu').toggleClass('in');
     });
 })
 },{"jquery":1}]},{},[2]);

@@ -3,7 +3,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
 }
 
-.menu {
+.menu-trigger {
     position: fixed;
     right: 0;
     top: 0;
@@ -12,9 +12,6 @@ h1, h2, h3, h4, h5, h6 {
     background: #fff;
     max-width: 100px;
     .transition(max-width 1s ease-in);
-    .wrapper {
-        position: relative;
-    }
     .fa {
         background: #fff;
         font-size: 3em;
@@ -22,20 +19,30 @@ h1, h2, h3, h4, h5, h6 {
         right: 0;
         padding: 15px;
     }
+}
+.menu {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 1;
+    font-size: 2em;
+    width: 0;
+    right: 0;
+    .box-shadow(-1px 1px 11px rgba(0, 0, 0, 0.9));
+    overflow: hidden;
+    .transition(width 0.3s ease-in);
+    .menu-wrapper {
+        padding: 20px;
+    }
     ul,li {
         list-style: none;
         padding: 0;
         margin: 0;
-    }
-    ul {
-        position: absolute;
-        right: -100px;
-        .transition(right 0.3s ease-in);
+        white-space: nowrap;
     }
     &.in {
-        max-width: 1000px;
-        ul {
-            right: 100px;
+        width: 200px;
+        .menu-wrapper {
+            right: 0;
         }
     }
 }
